@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.vercel/
+test-results/
+playwright-report/
+artifacts/
+*.local
+*.log
+*.tsbuildinfo
+online-index.html
+.DS_Store
