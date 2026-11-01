@@ -15,7 +15,7 @@ export function AboutDialog({ dialogRef }: AboutDialogProps) {
       <h3>你的记录如何保存</h3>
       <p>无需注册，阅读记录与思考仅保存在当前浏览器的本地存储中，不会发送到服务器。更换设备或清理浏览器数据前，请在“我的记录”中导出备份。</p>
       <h3>内容说明</h3>
-      <p>当前收录 {quotes.length} 条语录。“今日提示”和语境说明属于编辑导读，不是原文内容；每条语录均可通过来源链接继续核对。</p>
+      <p>当前收录 {quotes.length} 条语录，覆盖《毛泽东选集》第一至第五卷。“今日提示”“历史语境”“当下意义”和“理解边界”属于编辑导读，不是原文内容；每条均可通过来源链接继续核对。</p>
       <button className="button button-primary" type="button" onClick={() => dialogRef.current?.close()}>继续阅读</button>
     </dialog>
   );

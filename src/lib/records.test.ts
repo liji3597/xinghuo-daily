@@ -40,6 +40,9 @@ describe('阅读记录', () => {
     expect(markdown).toContain('## 2026-11-01');
     expect(markdown).toContain(`> ${quotes[0].text}`);
     expect(markdown).toContain(`《${quotes[0].work}》`);
+    expect(markdown).toContain(`**历史语境**\n\n${quotes[0].historicalContext}`);
+    expect(markdown).toContain(`**当下意义**\n\n${quotes[0].todayMeaning}`);
+    expect(markdown).toContain(`**理解边界**\n\n${quotes[0].boundary}`);
     expect(markdown).toContain('**我的思考**\n\n先调查，再行动。');
     expect(markdown).toContain('*这一天只阅读，未写思考。*');
     expect(markdown).not.toContain('2026-11-02');

@@ -24,6 +24,7 @@ export function recordsToMarkdown(records: RecordMap): string {
     const quote = quoteById.get(record.quoteId);
     if (!quote) continue;
     lines.push(`## ${record.date}`, '', `> ${quote.text}`, '', `——《毛泽东选集》${quote.volume}《${quote.work}》`, '');
+    lines.push('**历史语境**', '', quote.historicalContext, '', '**当下意义**', '', quote.todayMeaning, '', '**理解边界**', '', quote.boundary, '');
     lines.push(record.thought ? `**我的思考**\n\n${record.thought}` : '*这一天只阅读，未写思考。*', '');
   }
   return lines.join('\n');

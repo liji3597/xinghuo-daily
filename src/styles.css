@@ -103,7 +103,9 @@ a { color: inherit; }
 .quote-context { margin-top: auto; padding-top: 1.25rem; color: var(--muted); font-size: 0.75rem; }
 .quote-context summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; color: var(--ink); }
 .quote-context > div { padding: 0 0 0.5rem; line-height: 1.8; }
-.quote-context p { margin: 0 0 0.75rem; }
+.quote-context section { margin: 0 0 1rem; }
+.quote-context h3 { margin: 0 0 0.3rem; color: var(--ink); font-size: 0.75rem; font-weight: 650; }
+.quote-context p { margin: 0; }
 .quote-context a { display: inline-flex; align-items: center; gap: 0.25rem; min-height: 44px; color: var(--red); text-decoration: none; }
 
 .revealed-heading { margin-bottom: 1.5rem; }

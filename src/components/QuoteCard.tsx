@@ -39,9 +39,20 @@ export function QuoteCard({ quote, revealed, onReveal, dayNumber, free = false }
             <p>{quote.hint}</p>
           </div>
           <details className="quote-context">
-            <summary>阅读原文语境</summary>
+            <summary>读懂这句话</summary>
             <div>
-              <p>{quote.context}</p>
+              <section>
+                <h3>历史语境</h3>
+                <p>{quote.historicalContext}</p>
+              </section>
+              <section>
+                <h3>当下意义</h3>
+                <p>{quote.todayMeaning}</p>
+              </section>
+              <section>
+                <h3>理解边界</h3>
+                <p>{quote.boundary}</p>
+              </section>
               <a href={quote.sourceUrl} target="_blank" rel="noreferrer" tabIndex={revealed ? 0 : -1}>
                 查看原文来源 <ArrowUpRight size={14} aria-hidden="true" />
               </a>

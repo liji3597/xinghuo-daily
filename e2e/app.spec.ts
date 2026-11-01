@@ -105,6 +105,11 @@ test('手机端长语录保持完整且布局稳定', async ({ browser }) => {
   await page.goto('/');
   await expect(page.getByRole('textbox', { name: '今天的思考' })).toHaveValue('长语录布局测试');
   await expect(page.locator('blockquote')).toContainText('共产党的正确而不动摇的斗争策略');
+  await page.getByText('读懂这句话', { exact: true }).click();
+  await expect(page.getByRole('heading', { name: '历史语境', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '当下意义', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '理解边界', exact: true })).toBeVisible();
+  await expect(page.locator('.quote-context')).toContainText('1930 年');
   await expectNoOverflow(page);
   await page.screenshot({ path: `${artifacts}/long-quote-mobile.png`, fullPage: true });
   await context.close();

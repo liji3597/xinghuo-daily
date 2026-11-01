@@ -5,7 +5,7 @@ import { Toast } from './components/Toast';
 import { TodayPage } from './pages/TodayPage';
 import { FreePage } from './pages/FreePage';
 import { HistoryPage } from './pages/HistoryPage';
-import { quotes } from './data/quotes';
+import { quoteById, quotes } from './data/quotes';
 import { getDailyQuote, toLocalDateKey } from './lib/date';
 import { calculateStreak } from './lib/records';
 import type { RecordMap } from './lib/records';
@@ -39,7 +39,7 @@ export default function App() {
   const [toast, setToast] = useState<ToastState | null>(null);
   const aboutDialog = useRef<HTMLDialogElement>(null);
   const dailyQuote = useMemo(() => {
-    const recordedQuote = quotes.find((quote) => quote.id === records[today]?.quoteId);
+    const recordedQuote = quoteById.get(records[today]?.quoteId ?? '');
     return recordedQuote ?? getDailyQuote(today, quotes);
   }, [today, records]);
   const currentRecord = records[today];

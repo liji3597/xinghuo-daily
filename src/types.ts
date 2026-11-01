@@ -5,7 +5,9 @@ export type Quote = {
   work: string;
   year: string;
   hint: string;
-  context: string;
+  historicalContext: string;
+  todayMeaning: string;
+  boundary: string;
   sourceUrl: string;
 };
 
